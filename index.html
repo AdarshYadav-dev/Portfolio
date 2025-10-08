@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Suvajit Saha - MERN Stack Developer">
+    <title>Suvajit Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#6366f1',
+                        },
+                        secondary: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="dark:bg-gray-900 dark:text-gray-100 min-h-screen font-sans antialiased">
+    <div id="vanta-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-gradient">Portfolio</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 text-sm font-medium hover:text-primary-500 transition">Home</a>
+                        <a href="#about"
+                            class="px-3 py-2 text-sm font-medium hover:text-primary-500 transition">About</a>
+                        <a href="#skills"
+                            class="px-3 py-2 text-sm font-medium hover:text-primary-500 transition">Skills</a>
+                        <a href="#education"
+                            class="px-3 py-2 text-sm font-medium hover:text-primary-500 transition">Education</a>
+                        <a href="#projects"
+                            class="px-3 py-2 text-sm font-medium hover:text-primary-500 transition">Projects</a>
+                        <a href="#contact"
+                            class="px-3 py-2 text-sm font-medium hover:text-primary-500 transition">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-800">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-500 transition">Home</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-500 transition">About</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-500 transition">Skills</a>
+                <a href="#projects"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-500 transition">Projects</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+                    Hi, I'm <span class="text-gradient">Suvajit Saha</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-lg">
+                    A MERN-stack developer who loves building interactive web apps and tackling real-world problems.
+                </p>
+                <a href="assets/Suvajit_Saha_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="inline-block bg-secondary-500 hover:bg-secondary-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg">
+                    📄 View Resume
+                </a>
+
+                <div class="flex space-x-4">
+                    <a href="#contact"
+                        class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
+                        Contact Me
+                    </a>
+                    <a href="#projects"
+                        class="border border-gray-700 hover:border-primary-500 text-gray-300 hover:text-primary-500 px-6 py-3 rounded-lg font-medium transition">
+                        View Work
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="relative">
+                <div
+                    class="w-full h-80 md:h-96 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-30"></div>
+                    <img src="" alt="Suvajit"
+                        class="w-full h-full object-cover mix-blend-overlay">
+                </div>
+            </div> -->
+            <div class="relative">
+                <div class="w-72 h-72 mx-auto rounded-full border-4 border-primary-500 overflow-hidden shadow-lg">
+                    <img src="./assets/profile pic.jpg" alt="Suvajit" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800/50 rounded-xl backdrop-blur-sm"
+        data-aos="fade-right">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="col-span-2">
+                <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                <p class="text-gray-400 mb-6">
+                    I’m a recent CSE graduate with a passion for web development. From crafting MERN-based apps to
+                    integrating ML models with web frontends, I enjoy solving problems that blend creativity with
+                    technology.
+                </p>
+                <p class="text-gray-400 mb-6">
+                    I believe in creating solutions that are not only functional but also delightful to use.
+                    Every pixel and interaction matters in creating memorable experiences.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Education -->
+                    <div class="flex items-center">
+                        <i data-feather="award" class="text-primary-500 mr-3"></i>
+                        <span class="text-gray-300 ">Recent CSE Graduate</span>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="flex items-center">
+                        <i data-feather="folder" class="text-primary-500 mr-3"></i>
+                        <span class="text-gray-300">10+ Hands-on Projects</span>
+                    </div>
+
+                    <!-- Coding Practice -->
+                    <div class="flex items-center">
+                        <i data-feather="code" class="text-primary-500 mr-3"></i>
+                        <span class="text-gray-300">300+ DSA Problems Solved</span>
+                    </div>
+
+                    <!-- Internship Experience -->
+                    <div class="flex items-center">
+                        <i data-feather="briefcase" class="text-primary-500 mr-3"></i>
+                        <span class="text-gray-300">MERN Internship at ITOBUZ</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="relative">
+                <div class="bg-gray-700 rounded-xl p-6 h-full card-hover">
+                    <h3 class="text-xl font-semibold mb-4">My Approach</h3>
+                    <ul class="space-y-4">
+
+                        <li class="flex items-start">
+                            <i data-feather="zap" class="text-secondary-500 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Building Fast & Responsive Web Apps</span>
+                        </li>
+
+                        <li class="flex items-start">
+                            <i data-feather="layers" class="text-secondary-500 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Developing Scalable MERN Stack Architectures</span>
+                        </li>
+
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-secondary-500 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Writing Clean, Maintainable & Tested Code</span>
+                        </li>
+
+                        <li class="flex items-start">
+                            <i data-feather="cpu" class="text-secondary-500 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Integrating APIs & Backend Services Seamlessly</span>
+                        </li>
+
+                        <li class="flex items-start">
+                            <i data-feather="users" class="text-secondary-500 mr-3 mt-1"></i>
+                            <span class="text-gray-300">Focusing on User Experience & Practical Solutions</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" data-aos="zoom-in">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">My Skills</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <!-- Frontend -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover backdrop-blur-sm">
+                <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-full flex items-center justify-center">
+                    <i data-feather="code" class="text-primary-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Frontend</h3>
+                <p class="text-gray-400 text-sm">HTML, CSS, JavaScript, React, Tailwind</p>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover backdrop-blur-sm">
+                <div class="w-16 h-16 mx-auto mb-4 bg-secondary-500/10 rounded-full flex items-center justify-center">
+                    <i data-feather="server" class="text-secondary-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Backend</h3>
+                <p class="text-gray-400 text-sm">Node.js, Express, REST APIs, JWT</p>
+            </div>
+
+            <!-- Databases -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover backdrop-blur-sm">
+                <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-full flex items-center justify-center">
+                    <i data-feather="database" class="text-primary-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Databases</h3>
+                <p class="text-gray-400 text-sm">MongoDB, MySQL, Firebase</p>
+            </div>
+
+            <!-- Collaboration & Tools -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover backdrop-blur-sm">
+                <div class="w-16 h-16 mx-auto mb-4 bg-secondary-500/10 rounded-full flex items-center justify-center">
+                    <i data-feather="layers" class="text-secondary-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Collaboration & Tools</h3>
+                <p class="text-gray-400 text-sm">Jira, Git, GitHub, Docker</p>
+            </div>
+
+            <!-- UI/UX & Design Basics -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover backdrop-blur-sm">
+                <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-full flex items-center justify-center">
+                    <i data-feather="monitor" class="text-primary-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Design Basics</h3>
+                <p class="text-gray-400 text-sm">Figma, Adobe XD, UI/UX Principles</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education"
+        class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800/30 rounded-xl backdrop-blur-sm"
+        data-aos="fade-right">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Education</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Graduation -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover">
+                <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                    <img src="assets/Meghnad_Saha_Institute_of_Technology_Logo.svg.png" alt="MSIT Logo"
+                        class="w-14 h-14 object-contain " loading="lazy">
+
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Graduation</h3>
+                <p class="text-gray-300 font-medium">B.Tech in CSE</p>
+                <p class="text-gray-400">Meghnad Saha Institute of Technology (MAKAUT University)</p>
+                <p class="text-gray-400 mt-2">2021 – 2025</p>
+                <p class="text-gray-400">CGPA: <span class="text-primary-500 font-semibold">8.45</span></p>
+            </div>
+
+            <!-- Higher Secondary -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover">
+                <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                    <img src="https://kumarashutoshmain.org/wp-content/uploads/2024/01/589984.jpg"
+                        alt="Kumar Ashutosh Logo" class="w-16 h-16 object-contain rounded-full ">
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Higher Secondary</h3>
+                <p class="text-gray-300 font-medium">Science Stream</p>
+                <p class="text-gray-400">Kumar Ashutosh Institution (main) Boys' (WBCHSE Board)</p>
+                <p class="text-gray-400 mt-2">Completed: 2021</p>
+                <p class="text-gray-400">Percentage: <span class="text-primary-500 font-semibold">84</span></p>
+            </div>
+
+            <!-- Secondary -->
+            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover">
+                <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+                    <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-1/397421560_808095537784159_8080291684722642459_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=f907e8&_nc_ohc=Q9t4qGroFWUQ7kNvwFMObvj&_nc_oc=AdnhXfqond60ULlHHMEOK_vTKWfSRoy_b5w16xy_PulliItEItOtyuzFjBAmi8wnVJ0&_nc_zt=24&_nc_ht=scontent.fccu3-1.fna&_nc_gid=R3Uza07JqTux7gHshr91lw&oh=00_AfdYf5Joeo2efqKpeI-SITz8f3YpXDm6UJ0iA8UwN-2YDg&oe=68E92F97"
+                        alt="TSCCS" class="w-16 h-16 object-contain rounded-full ">
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Secondary</h3>
+                <p class="text-gray-300 font-medium">General Curriculum</p>
+                <p class="text-gray-400">The Scottish Church Collegiate School (WBBSE Board)</p>
+                <p class="text-gray-400 mt-2">Completed: 2019</p>
+                <p class="text-gray-400">Percentage: <span class="text-primary-500 font-semibold">87.42</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800/30 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4" data-aos="zoom-in">Featured Projects</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1: Innomart -->
+            <div class="bg-gray-800/50 rounded-xl overflow-hidden card-hover backdrop-blur-sm">
+                <div class="h-48 bg-white relative">
+                    <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/innomart.png"
+                        alt="Innomart" class="w-full h-full object-contain">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Web App</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Innomart</h3>
+                    <p class="text-gray-400 mb-4">Full-featured e-commerce platform with user management, cart, orders,
+                        payment integration, and real-time chat & notifications.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">React</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">MongoDB</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">Socket.IO</span>
+                    </div>
+                    <a href="#" class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+                        View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: NotesApp -->
+            <!-- <div class="bg-gray-800/50 rounded-xl overflow-hidden card-hover backdrop-blur-sm">
+                <div class="h-48 bg-gradient-to-r from-secondary-500 to-primary-500 relative">
+                    <img src="https://via.placeholder.com/640x360?text=NotesApp" alt="NotesApp"
+                        class="w-full h-full object-cover mix-blend-overlay">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Web App</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">NotesApp</h3>
+                    <p class="text-gray-400 mb-4">A personal note-taking app with authentication, CRUD functionality,
+                        and a clean, intuitive UI.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">React</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">MongoDB</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">JWT</span>
+                    </div>
+                    <a href="#" class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+                        View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div> -->
+            <!-- Notes App Project -->
+            <div class=" rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
+                <div class="swiper h-48 relative">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide bg-white">
+                            <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-3.png"
+                                class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 1">
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-1.png"
+                                class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 2">
+                        </div>
+                        <div class="swiper-slide  bg-[#9DC0FA]">
+                            <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-2.png"
+                                class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 3">
+                        </div>
+                    </div>
+                    <!-- Pagination dots -->
+                    <div class="swiper-pagination absolute bottom-2 left-0 w-full text-center"></div>
+                </div>
+
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Notes App</h3>
+                    <p class="text-gray-400 mb-4">A simple and intuitive notes app with add, edit, and delete
+                        functionality.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">React</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">MongoDB</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">Express.js</span>
+
+                    </div>
+                    <a href="https://github.com/Suvajit2640/BloggingApp" target="_blank"
+                        class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+                        View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: Memory Matching Game -->
+            <div class=" rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
+                <div class="h-48  relative">
+                    <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/memory-game.png"
+                        alt="Memory Matching Game" class="w-full h-full object-cover ">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Game</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Memory Matching Game</h3>
+                    <p class="text-gray-400 mb-4">A fun, interactive browser-based memory game built with JavaScript,
+                        HTML, and CSS.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">JavaScript</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">HTML</span>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded">CSS</span>
+                    </div>
+                    <a href="https://suvajit2640.github.io/Memory-Game/" target="_blank"
+                        class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+                        View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="https://github.com/Suvajit2640" target="_blank"
+                class="inline-flex items-center border border-gray-700 hover:border-primary-500 text-gray-300 hover:text-primary-500 px-6 py-3 rounded-lg font-medium transition">
+                View All Projects
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="mail" class="text-primary-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Email</h4>
+                            <p class="text-gray-400">suvajit2003saha@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="text-primary-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Phone</h4>
+                            <p class="text-gray-400">+91 8777761060</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="text-primary-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Location</h4>
+                            <p class="text-gray-400">Kolkata, West Bengal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="font-medium mb-4">Connect with me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Suvajit2640" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-500 transition">
+                            <i data-feather="github" class="text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/suvajit-saha/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition">
+                            <i data-feather="linkedin" class="text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.geeksforgeeks.org/user/suvajit2640saha/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition">
+                            <i data-feather="code" class="text-gray-300 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm">
+                <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" id="name"
+                            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                        <input type="email" id="email"
+                            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                        <textarea id="message" rows="4"
+                            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="mail" class="text-primary-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Email</h4>
+                            <p class="text-gray-400">suvajit2003saha@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="text-primary-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Phone</h4>
+                            <p class="text-gray-400">+91 8777761060</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="text-primary-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Location</h4>
+                            <p class="text-gray-400">Kolkata, West Bengal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="font-medium mb-4">Connect with me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Suvajit2640" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-500 transition">
+                            <i data-feather="github" class="text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/suvajit-saha/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition">
+                            <i data-feather="linkedin" class="text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.geeksforgeeks.org/user/suvajit2640saha/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition">
+                            <i data-feather="code" class="text-gray-300 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm relative">
+                <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Toast Container -->
+                <div id="toast"
+                    class="fixed bottom-6 right-6 px-6 py-4 rounded-lg shadow-lg text-white font-medium transition-all opacity-0 pointer-events-none">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-800 mt-12">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <span class="text-xl font-bold text-gradient">Portfolio</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#home" class="text-gray-400 hover:text-primary-500 transition">Home</a>
+                <a href="#about" class="text-gray-400 hover:text-primary-500 transition">About</a>
+                <a href="#skills" class="text-gray-400 hover:text-primary-500 transition">Skills</a>
+                <a href="#projects" class="text-gray-400 hover:text-primary-500 transition">Projects</a>
+                <a href="#contact" class="text-gray-400 hover:text-primary-500 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,57 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+  feather.replace();
 
-AOS.init({
-  duration: 800,          
-  once: true,             
-  offset: 100,            
-  easing: 'ease-in-out',
-  throttleDelay: 50       
-});
+  const form = document.getElementById('contactForm');
+  if (!form) return;
 
-const menuBtn = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-
-if (menuBtn && mobileMenu) {
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-}
-
-feather.replace();
-
-
-if (document.getElementById('vanta-bg')) {
-  VANTA.GLOBE({
-    el: "#vanta-bg",
-    mouseControls: true,
-    touchControls: true,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0x6366f1,
-    color2: 0x10b981,
-    backgroundColor: 0x000000
-  });
-}
-
-
-if (document.querySelector('.swiper')) {
-  const swiper = new Swiper('.swiper', {
-    loop: true,               // infinite loop
-    autoplay: {
-      delay: 2500,            // 2.5 seconds per slide
-      disableOnInteraction: false, // keeps autoplay even after user interacts
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-}
-
-const form = document.getElementById('contactForm');
-
-if (form) {
   const submitBtn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', async (e) => {
@@ -84,6 +36,7 @@ if (form) {
         }).showToast();
 
         form.reset();
+        form.scrollIntoView({ behavior: "smooth" });
       } else {
         const data = await response.json();
         const errorMsg = data.errors
@@ -103,9 +56,9 @@ if (form) {
           }
         }).showToast();
       }
-    } catch (error) {
+    } catch (err) {
       Toastify({
-        text: "Network error. Please try again.",
+        text: "Network error. Please try again. ❌",
         duration: 4000,
         gravity: "top",
         position: "center",
@@ -120,5 +73,4 @@ if (form) {
       if (submitBtn) submitBtn.disabled = false;
     }
   });
-}
-
+});

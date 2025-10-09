@@ -2,717 +2,852 @@
 <html lang="en" class="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Suvajit Saha - MERN Stack Developer">
-    <title>Suvajit Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Suvajit Saha - MERN Stack Developer">
+  <title>Suvajit Portfolio</title>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { 500: '#6366f1' },
-                        secondary: { 500: '#10b981' }
-                    }
-                }
-            }
-        };
-    </script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { 500: '#6366f1' },
+            secondary: { 500: '#10b981' }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Vanta.js Globe Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
 
-    <!-- Vanta.js Globe Effect -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-    <!-- AOS Animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Swiper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <!-- Swiper Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Toastify -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- Toastify -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 </head>
 
 <body class="dark:bg-gray-900 dark:text-gray-100 font-sans antialiased">
 
-    <!-- Vanta Background -->
-    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+  <!-- Vanta Background -->
+  <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
 
-    <!-- Navbar -->
-<nav class="fixed w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800 shadow-md">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-            <!-- Logo -->
-            <a href="#home" class="text-2xl font-extrabold tracking-wider text-white hover:text-primary-500 transition duration-300">
-                &lt;Suvajit<span class="text-secondary-500">.Dev</span> /&gt;
-            </a>
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 font-medium text-gray-300">
-                <a href="#home" class="relative group">
-                    Home
-                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#about" class="relative group">
-                    About
-                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#skills" class="relative group">
-                    Skills
-                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#education" class="relative group">
-                    Education
-                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#projects" class="relative group">
-                    Projects
-                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#contact" class="relative group">
-                    Contact
-                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
-                </a>
-            </div>
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <a href="#home"
+          class="text-2xl font-extrabold tracking-wider text-white hover:text-primary-500 transition duration-300">
+          &lt;Suvajit<span class="text-secondary-500">.Dev</span> /&gt;
+        </a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 font-medium text-gray-300">
+          <a href="#home" class="relative group">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#about" class="relative group">
+            About
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#experience" class="relative group">
+            Experience
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#skills" class="relative group">
+            Skills
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#education" class="relative group">
+            Education
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#projects" class="relative group">
+            Projects
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#contact" class="relative group">
+            Contact
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-500 transition-all group-hover:w-full"></span>
+          </a>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded hover:bg-gray-800 transition">
-                <i data-feather="menu" class="text-gray-300 w-6 h-6"></i>
-            </button>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded hover:bg-gray-800 transition">
+          <i data-feather="menu" class="text-gray-300 w-6 h-6"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 px-4 py-6 space-y-4 shadow-lg transform transition-all duration-300 origin-top">
-        <a href="#home" class="block text-gray-300 text-lg hover:text-primary-500">Home</a>
-        <a href="#about" class="block text-gray-300 text-lg hover:text-primary-500">About</a>
-        <a href="#skills" class="block text-gray-300 text-lg hover:text-primary-500">Skills</a>
-        <a href="#education" class="block text-gray-300 text-lg hover:text-primary-500">Education</a>
-        <a href="#projects" class="block text-gray-300 text-lg hover:text-primary-500">Projects</a>
-        <a href="#contact" class="block text-gray-300 text-lg hover:text-primary-500">Contact</a>
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-gray-900/95 px-4 py-6 space-y-4 shadow-lg transform transition-all duration-300 origin-top">
+      <a href="#home" class="block text-gray-300 text-lg hover:text-primary-500">Home</a>
+      <a href="#about" class="block text-gray-300 text-lg hover:text-primary-500">About</a>
+      <a href="#skills" class="block text-gray-300 text-lg hover:text-primary-500">Skills</a>
+      <a href="#education" class="block text-gray-300 text-lg hover:text-primary-500">Education</a>
+      <a href="#projects" class="block text-gray-300 text-lg hover:text-primary-500">Projects</a>
+      <a href="#contact" class="block text-gray-300 text-lg hover:text-primary-500">Contact</a>
     </div>
-</nav>
+  </nav>
 
 
-    <!-- Hero -->
-<section id="home" class="pt-32 pb-20 px-4 max-w-7xl mx-auto min-h-screen flex items-center">
+  <!-- Hero -->
+  <section id="home" class="pt-32 pb-20 px-4 max-w-7xl mx-auto min-h-screen flex items-center">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6" data-aos="fade-up">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-snug">
-                Building Scalable Solutions with the <span class="text-primary-500">MERN Stack</span>
-            </h1>
-            <p class="text-xl text-gray-300 max-w-lg">
-                Hi, I'm Suvajit Saha, a CSE Graduate and Full Stack Developer focused on delivering high-performance, maintainable web applications**.
-            </p>
-            <div class="flex space-x-4 pt-4">
-                <a href="#projects"
-                    class="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition duration-300 transform hover:scale-[1.03] shadow-lg shadow-primary-500/50">
-                    <i data-feather="code" class="w-5 h-5 mr-3"></i>
-                    View My Projects
-                </a>
-                <a href="assets/Suvajit_Saha_Resume.pdf" target="_blank" title="Download Professional Resume"
-                    class="inline-flex items-center border-2 border-secondary-500 hover:border-secondary-600 text-secondary-500 hover:text-secondary-600 px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 transform hover:bg-gray-800/50">
-                    <i data-feather="download-cloud" class="w-5 h-5 mr-3"></i>
-                    Download Resume
-                </a>
-            </div>
-            <a href="#contact" class="inline-block mt-4 text-sm text-gray-400 hover:text-white transition">
-                <i data-feather="mail" class="w-4 h-4 inline-block mr-1"></i>
-                Or connect directly: suvajit2003saha@gmail.com
-            </a>
+      <div class="space-y-6" data-aos="fade-up">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-snug">
+          Building Scalable Solutions with the <span class="text-primary-500">MERN Stack</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-lg">
+          Hi, I'm Suvajit Saha, a CSE Graduate and Full Stack Developer focused on delivering high-performance,
+          maintainable web applications**.
+        </p>
+        <div class="flex space-x-4 pt-4">
+          <a href="#projects"
+            class="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition duration-300 transform hover:scale-[1.03] shadow-lg shadow-primary-500/50">
+            <i data-feather="code" class="w-5 h-5 mr-3"></i>
+            View My Projects
+          </a>
+          <a href="assets/Suvajit_Saha_Resume.pdf" target="_blank" title="Download Professional Resume"
+            class="inline-flex items-center border-2 border-secondary-500 hover:border-secondary-600 text-secondary-500 hover:text-secondary-600 px-8 py-4 rounded-xl font-semibold text-lg transition duration-300 transform hover:bg-gray-800/50">
+            <i data-feather="download-cloud" class="w-5 h-5 mr-3"></i>
+            Download Resume
+          </a>
         </div>
+        <a href="#contact" class="inline-block mt-4 text-sm text-gray-400 hover:text-white transition">
+          <i data-feather="mail" class="w-4 h-4 inline-block mr-1"></i>
+          Or connect directly: suvajit2003saha@gmail.com
+        </a>
+      </div>
 
-        <div class="relative  justify-center items-center" data-aos="fade-left">
-            <div class="w-80 h-80 rounded-full border-4 border-primary-500 p-2 shadow-2xl shadow-primary-500/30 overflow-hidden transform transition duration-500 hover:scale-105">
-                <img src="./assets/profile pic.jpg" alt="Suvajit Saha - MERN Developer" class="w-full h-full object-cover rounded-full">
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- About Section -->
-<section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" data-aos="fade-up">
-  <!-- Section Title -->
-  <div class="text-center mb-16">
-    <h2 class="text-4xl font-extrabold text-gradient mb-4">About Me</h2>
-    <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-      I’m a CSE graduate passionate about crafting impactful web solutions with a focus on performance, scalability, and user-centric design.
-    </p>
-    <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-
-    <!-- Left: Story -->
-    <div class="col-span-2 space-y-6">
-      <h3 class="text-2xl font-semibold text-white">Who I Am</h3>
-      <p class="text-gray-300 leading-relaxed">
-        I’m a recent <span class="text-primary-400 font-medium">CSE graduate</span> with a strong passion for full-stack web development. 
-        From building <span class="text-secondary-400 font-medium">MERN-based applications</span> to integrating <span class="text-primary-400 font-medium">ML models with web frontends</span>, 
-        I enjoy solving real-world problems that merge creativity with technology.
-      </p>
-      <p class="text-gray-300 leading-relaxed">
-        I believe in crafting solutions that are <span class="text-secondary-400 font-medium">clean, scalable, and delightful</span> to use.
-        For me, great software isn’t just about code—it’s about seamless experiences for end users.
-      </p>
-
-      <!-- Quick Highlights -->
-      <div class="grid grid-cols-2 gap-4">
-        <div class="flex items-center">
-          <i data-feather="award" class="text-primary-500 mr-3 w-5 h-5"></i>
-          <span class="text-gray-200">CSE Graduate (CGPA 8.45)</span>
-        </div>
-
-        <div class="flex items-center">
-          <i data-feather="folder" class="text-primary-500 mr-3 w-5 h-5"></i>
-          <span class="text-gray-200">10+ Real-World Projects</span>
-        </div>
-
-        <div class="flex items-center">
-          <i data-feather="code" class="text-primary-500 mr-3 w-5 h-5"></i>
-          <span class="text-gray-200">300+ DSA Problems Solved</span>
-        </div>
-
-        <div class="flex items-center">
-          <i data-feather="briefcase" class="text-primary-500 mr-3 w-5 h-5"></i>
-          <span class="text-gray-200">SDE Intern @ ITOBUZ</span>
+      <div class="relative  justify-center items-center" data-aos="fade-left">
+        <div
+          class="w-80 h-80 rounded-full border-4 border-primary-500 p-2 shadow-2xl shadow-primary-500/30 overflow-hidden transform transition duration-500 hover:scale-105">
+          <img src="./assets/profile pic.jpg" alt="Suvajit Saha - MERN Developer"
+            class="w-full h-full object-cover rounded-full">
         </div>
       </div>
     </div>
-
-    <!-- Right: Approach / Strengths -->
-    <div class="bg-gray-800/50 rounded-xl p-6 backdrop-blur-sm card-hover shadow-lg">
-      <h3 class="text-xl font-semibold text-white mb-6 text-center">What I Bring</h3>
-      <ul class="space-y-5">
-        <li class="flex items-start">
-          <i data-feather="zap" class="text-secondary-400 mr-3 mt-1"></i>
-          <span class="text-gray-300 leading-snug">Fast & Responsive Web Applications</span>
-        </li>
-        <li class="flex items-start">
-          <i data-feather="layers" class="text-secondary-400 mr-3 mt-1"></i>
-          <span class="text-gray-300 leading-snug">Scalable MERN Stack Architectures</span>
-        </li>
-        <li class="flex items-start">
-          <i data-feather="check-circle" class="text-secondary-400 mr-3 mt-1"></i>
-          <span class="text-gray-300 leading-snug">Clean, Tested & Maintainable Code</span>
-        </li>
-        <li class="flex items-start">
-          <i data-feather="cpu" class="text-secondary-400 mr-3 mt-1"></i>
-          <span class="text-gray-300 leading-snug">API Integrations & Optimized Backends</span>
-        </li>
-        <li class="flex items-start">
-          <i data-feather="users" class="text-secondary-400 mr-3 mt-1"></i>
-          <span class="text-gray-300 leading-snug">Focus on User Experience & Practical Solutions</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Skills Section -->
-<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-900/50 rounded-lg shadow-2xl">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight relative inline-block">
-      Technical Skills
-      <span class="absolute bottom-[-10px] left-0 right-0 h-1.5 bg-gradient-to-r from-teal-400 to-indigo-600 rounded-full"></span>
-    </h2>
-    <p class="mt-4 text-xl text-gray-300">A comprehensive look at my professional stack and tools.</p>
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-    
-    <div class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-teal-500/50 relative overflow-hidden">
-      
-      <div class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-teal-500/80"></div>
-
-      <div class="w-20 h-20 mx-auto mb-4 bg-teal-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-        <i class="devicon-react-original colored text-4xl"></i>
-      </div>
-      <h3 class="text-2xl font-bold mb-4 text-white">Frontend</h3>
-      
-      <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
-        <span class="skill-tag">
-          <i class="devicon-html5-plain colored"></i> HTML
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-css3-plain colored"></i> CSS
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-javascript-plain colored"></i> JS
-        </span>
-        <span class="skill-tag text-teal-300 font-medium">
-          <i class="devicon-react-original colored"></i> React
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-tailwindcss-original colored"></i> Tailwind
-        </span>
-      </div>
-    </div>
-
-    <div class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-indigo-500/50 relative overflow-hidden">
-      <div class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-indigo-500/80"></div>
-      
-      <div class="w-20 h-20 mx-auto mb-4 bg-indigo-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-        <i class="devicon-nodejs-plain colored text-4xl"></i>
-      </div>
-      <h3 class="text-2xl font-bold mb-4 text-white">Backend</h3>
-      
-      <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
-        <span class="skill-tag text-indigo-300 font-medium">
-          <i class="devicon-nodejs-plain colored"></i> Node.js
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-express-original text-gray-300"></i> Express
-        </span>
-        <span class="skill-tag">
-          🔗 REST APIs
-        </span>
-        <span class="skill-tag">
-          🔑 JWT
-        </span>
-      </div>
-    </div>
-
-    <div class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-green-500/50 relative overflow-hidden">
-      <div class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-green-500/80"></div>
-      
-      <div class="w-20 h-20 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-        <i class="devicon-mongodb-plain colored text-4xl"></i>
-      </div>
-      <h3 class="text-2xl font-bold mb-4 text-white">Databases</h3>
-      
-      <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
-        <span class="skill-tag text-green-300 font-medium">
-          <i class="devicon-mongodb-plain colored"></i> MongoDB
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-mysql-plain colored"></i> MySQL
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-firebase-plain colored"></i> Firebase
-        </span>
-      </div>
-    </div>
-
-    <div class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-red-500/50 relative overflow-hidden">
-      <div class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-red-500/80"></div>
-      
-      <div class="w-20 h-20 mx-auto mb-4 bg-red-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-        <i class="devicon-git-plain colored text-4xl"></i>
-      </div>
-      <h3 class="text-2xl font-bold mb-4 text-white">DevOps & Tools</h3>
-      
-      <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
-        <span class="skill-tag">
-          <i class="devicon-jira-plain colored"></i> Jira
-        </span>
-        <span class="skill-tag text-red-300 font-medium">
-          <i class="devicon-git-plain colored"></i> Git
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-github-original colored"></i> GitHub
-        </span>
-        <span class="skill-tag">
-          <i class="devicon-docker-plain colored"></i> Docker
-        </span>
-      </div>
-    </div>
-
-    <div class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-pink-500/50 relative overflow-hidden">
-      <div class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-pink-500/80"></div>
-      
-      <div class="w-20 h-20 mx-auto mb-4 bg-pink-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-        <i class="devicon-figma-plain colored text-4xl"></i>
-      </div>
-      <h3 class="text-2xl font-bold mb-4 text-white">Design & UX</h3>
-      
-      <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
-        <span class="skill-tag text-pink-300 font-medium">
-          <i class="devicon-figma-plain colored"></i> Figma
-        </span>
-        <span class="skill-tag">
-          🎨 Adobe XD
-        </span>
-        <span class="skill-tag">
-          ✨ UI/UX Principles
-        </span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- Education Section -->
-    <section id="education"
-        class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800/30 rounded-xl backdrop-blur-sm"
-        data-aos="fade-right">
+  </section>
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" data-aos="fade-up">
+    <!-- Section Title -->
     <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold text-gradient mb-4">Education</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-            A strong foundation in academics combined with hands-on projects has shaped my technical and problem-solving skills.
-        </p>
-        <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gradient mb-3">About Me</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+        I’m a CSE graduate passionate about crafting impactful web solutions with a focus on performance, scalability,
+        and user-centric design.
+      </p>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
     </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
 
-            <!-- Graduation -->
-            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover">
-                <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                    <img src="assets/Meghnad_Saha_Institute_of_Technology_Logo.svg.png" alt="MSIT Logo"
-                        class="w-14 h-14 object-contain " loading="lazy">
-
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Graduation</h3>
-                <p class="text-gray-300 font-medium">B.Tech in CSE</p>
-                <p class="text-gray-400">Meghnad Saha Institute of Technology (MAKAUT University)</p>
-                <p class="text-gray-400 mt-2">2021 – 2025</p>
-                <p class="text-gray-400">CGPA: <span class="text-primary-500 font-semibold">8.45</span></p>
-            </div>
-
-            <!-- Higher Secondary -->
-            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover">
-                <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                    <img src="https://kumarashutoshmain.org/wp-content/uploads/2024/01/589984.jpg"
-                        alt="Kumar Ashutosh Logo" class="w-16 h-16 object-contain rounded-full ">
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Higher Secondary</h3>
-                <p class="text-gray-300 font-medium">Science Stream</p>
-                <p class="text-gray-400">Kumar Ashutosh Institution (main) Boys' (WBCHSE Board)</p>
-                <p class="text-gray-400 mt-2">Completed: 2021</p>
-                <p class="text-gray-400">Percentage: <span class="text-primary-500 font-semibold">84</span></p>
-            </div>
-
-            <!-- Secondary -->
-            <div class="bg-gray-800/50 rounded-xl p-6 text-center card-hover">
-                <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                    <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-1/397421560_808095537784159_8080291684722642459_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=f907e8&_nc_ohc=Q9t4qGroFWUQ7kNvwFMObvj&_nc_oc=AdnhXfqond60ULlHHMEOK_vTKWfSRoy_b5w16xy_PulliItEItOtyuzFjBAmi8wnVJ0&_nc_zt=24&_nc_ht=scontent.fccu3-1.fna&_nc_gid=R3Uza07JqTux7gHshr91lw&oh=00_AfdYf5Joeo2efqKpeI-SITz8f3YpXDm6UJ0iA8UwN-2YDg&oe=68E92F97"
-                        alt="TSCCS" class="w-16 h-16 object-contain rounded-full ">
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Secondary</h3>
-                <p class="text-gray-300 font-medium">General Curriculum</p>
-                <p class="text-gray-400">The Scottish Church Collegiate School (WBBSE Board)</p>
-                <p class="text-gray-400 mt-2">Completed: 2019</p>
-                <p class="text-gray-400">Percentage: <span class="text-primary-500 font-semibold">87.42</span></p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Project Section -->
-
-<section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800/30 rounded-xl">
-  <div class="text-center mb-12">
-    <h2 class="text-3xl font-bold mb-4" data-aos="zoom-in">Featured Projects</h2>
-    <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <!-- Project 1: Innomart -->
-    <div class="bg-gray-800/50 rounded-xl overflow-hidden card-hover backdrop-blur-sm">
-      <div class="h-48 bg-white relative">
-        <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/innomart.png"
-             alt="Innomart" class="w-full h-full object-contain">
-        <div class="absolute top-4 right-4">
-          <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Web App</span>
-        </div>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Innomart</h3>
-        <p class="text-gray-400 mb-4">
-          Full-featured e-commerce platform with user management, cart, orders,
-          payment integration, and real-time chat & notifications.
+      <!-- Left: Story -->
+      <div class="col-span-2 space-y-6">
+        <h3 class="text-2xl font-semibold text-white">Who I Am</h3>
+        <p class="text-gray-300 leading-relaxed">
+          I’m a recent <span class="text-primary-400 font-medium">CSE graduate</span> with a strong passion for
+          full-stack web development.
+          From building <span class="text-secondary-400 font-medium">MERN-based applications</span> to integrating <span
+            class="text-primary-400 font-medium">ML models with web frontends</span>,
+          I enjoy solving real-world problems that merge creativity with technology.
         </p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-react-original colored text-base"></i> React
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-nodejs-plain colored text-base"></i> Node.js
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-mongodb-plain colored text-base"></i> MongoDB
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-socketio-original text-gray-300 text-base"></i> Socket.IO
-          </span>
-        </div>
-        <a href="#" class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
-          View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-        </a>
-      </div>
-    </div>
+        <p class="text-gray-300 leading-relaxed">
+          I believe in crafting solutions that are <span class="text-secondary-400 font-medium">clean, scalable, and
+            delightful</span> to use.
+          For me, great software isn’t just about code—it’s about seamless experiences for end users.
+        </p>
 
-    <!-- Project 2: Notes App -->
-    <div class="rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
-      <div class="swiper h-48 relative">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide bg-white">
-            <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-3.png"
-                 class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 1">
+        <!-- Quick Highlights -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex items-center">
+            <i data-feather="award" class="text-primary-500 mr-3 w-5 h-5"></i>
+            <span class="text-gray-200">CSE Graduate (CGPA 8.45)</span>
           </div>
-          <div class="swiper-slide bg-white">
-            <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-1.png"
-                 class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 2">
+
+          <div class="flex items-center">
+            <i data-feather="folder" class="text-primary-500 mr-3 w-5 h-5"></i>
+            <span class="text-gray-200">10+ Real-World Projects</span>
           </div>
-          <div class="swiper-slide bg-[#9DC0FA]">
-            <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-2.png"
-                 class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 3">
+
+          <div class="flex items-center">
+            <i data-feather="code" class="text-primary-500 mr-3 w-5 h-5"></i>
+            <span class="text-gray-200">300+ DSA Problems Solved</span>
+          </div>
+
+          <div class="flex items-center">
+            <i data-feather="briefcase" class="text-primary-500 mr-3 w-5 h-5"></i>
+            <span class="text-gray-200">SDE Intern @ ITOBUZ</span>
           </div>
         </div>
-        <div class="swiper-pagination absolute bottom-2 left-0 w-full text-center"></div>
       </div>
 
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Notes App</h3>
-        <p class="text-gray-400 mb-4">
-          A full-stack notes management app with
-          <span class="text-primary-400 font-medium">add, edit, delete</span>,
-          plus <span class="text-primary-400 font-medium">server-side pagination</span>
-          and <span class="text-primary-400 font-medium">search with debouncing</span>
-          for smooth and scalable performance.
-        </p>
-
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-react-original colored text-base"></i> React
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-nodejs-plain colored text-base"></i> Node.js
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-express-original text-gray-300 text-base"></i> Express.js
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-mongodb-plain colored text-base"></i> MongoDB
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-rest-plain text-gray-300 text-base"></i> REST API
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            🔎 Debounced Search
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            📄 Pagination
-          </span>
-        </div>
-
-        <a href="https://github.com/Suvajit2640/NotesApp" target="_blank"
-           class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
-          View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-        </a>
+      <!-- Right: Approach / Strengths -->
+      <div class="bg-gray-800/50 rounded-xl p-6 backdrop-blur-sm card-hover shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-6 text-center">What I Bring</h3>
+        <ul class="space-y-5">
+          <li class="flex items-start">
+            <i data-feather="zap" class="text-secondary-400 mr-3 mt-1"></i>
+            <span class="text-gray-300 leading-snug">Fast & Responsive Web Applications</span>
+          </li>
+          <li class="flex items-start">
+            <i data-feather="layers" class="text-secondary-400 mr-3 mt-1"></i>
+            <span class="text-gray-300 leading-snug">Scalable MERN Stack Architectures</span>
+          </li>
+          <li class="flex items-start">
+            <i data-feather="check-circle" class="text-secondary-400 mr-3 mt-1"></i>
+            <span class="text-gray-300 leading-snug">Clean, Tested & Maintainable Code</span>
+          </li>
+          <li class="flex items-start">
+            <i data-feather="cpu" class="text-secondary-400 mr-3 mt-1"></i>
+            <span class="text-gray-300 leading-snug">API Integrations & Optimized Backends</span>
+          </li>
+          <li class="flex items-start">
+            <i data-feather="users" class="text-secondary-400 mr-3 mt-1"></i>
+            <span class="text-gray-300 leading-snug">Focus on User Experience & Practical Solutions</span>
+          </li>
+        </ul>
       </div>
     </div>
+  </section>
 
-    <!-- Project 3: Memory Matching Game -->
-    <div class="rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
-      <div class="h-48 relative">
-        <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/memory-game.png"
-             alt="Memory Matching Game" class="w-full h-full object-cover">
-        <div class="absolute top-4 right-4">
-          <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Game</span>
-        </div>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Memory Matching Game</h3>
-        <p class="text-gray-400 mb-4">
-          A fun, interactive browser-based memory game built with JavaScript, HTML, and CSS.
-        </p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-javascript-plain colored text-base"></i> JavaScript
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-html5-plain colored text-base"></i> HTML
-          </span>
-          <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
-            <i class="devicon-css3-plain colored text-base"></i> CSS
-          </span>
-        </div>
-        <a href="https://suvajit2640.github.io/Memory-Game/" target="_blank"
-           class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
-          View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="text-center mt-12">
-    <a href="https://github.com/Suvajit2640" target="_blank"
-       class="inline-flex items-center border border-gray-700 hover:border-primary-500 text-gray-300 hover:text-primary-500 px-6 py-3 rounded-lg font-medium transition">
-      View All Projects
-    </a>
-  </div>
-</section>
-
-<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- Experience Section -->
+  <section id="experience" class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
     <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold mb-4 text-white">Let's Build Something Great Together</h2>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Ready to discuss your next MERN project or a full-time role?</p>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4"></div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gradient mb-3">Professional Journey</h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        My career path with key roles, responsibilities, and technologies mastered.
+      </p>
+      <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Experience Timeline -->
+    <div class="relative">
+      <!-- Timeline line -->
+      <div
+        class="hidden md:block absolute md:left-[100px]  xl:left-[350px] w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-500 transform -translate-x-1/2">
+      </div>
+
+      <!-- Experience Item -->
+      <div class="relative mb-8 md:mb-16 group">
+        <div
+          class="experience-dot absolute flex items-center justify-center w-8 h-8 md:w-8 md:h-8 rounded-full bg-indigo-600 border-4 border-gray-900 left-1/2 md:left-[100px] xl:left-[350px] transform -translate-x-1/2 -translate-y-4 z-10">
+          <i data-feather="briefcase" class="text-white w-3 h-3 md:w-4 md:h-4"></i>
+        </div>
+
+        <div
+          class="experience-card bg-gray-800/70 backdrop-blur-sm rounded-xl p-5 md:p-6 shadow-lg border border-gray-700 hover:border-indigo-500/50 transition-all duration-300 md:max-w-md lg:max-w-lg">
+          <div class="flex items-center mb-3">
+            <div
+              class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg flex items-center justify-center mr-3 md:mr-4 overflow-hidden">
+              <img
+                src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/itobuz_technologies_pvt_ltd_logo.jpeg"
+                alt="Itobuz Logo" class="w-8 h-8 md:w-10 md:h-10 object-contain">
+            </div>
+            <div>
+              <h3 class="text-lg md:text-xl font-bold text-white">Software Development Engineer Intern</h3>
+              <a href="./assets/Itobuz_completion.pdf" title="Download Professional Resume" target="_blank"
+                class="text-purple-400 text-sm md:text-base font-medium flex items-center">
+                <i data-feather="award" class="w-4 h-4"></i>
+                Itobuz Technologies
+              </a>
+
+            </div>
+          </div>
+
+          <div class="text-gray-300 text-sm md:text-base mb-3">
+            <div class="flex items-center mb-1 md:mb-2">
+              <i data-feather="calendar" class="w-3 h-3 md:w-4 md:h-4 mr-2 text-indigo-400"></i>
+              <span>Nov 2024 - May 2025 (6 months)</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="map-pin" class="w-3 h-3 md:w-4 md:h-4 mr-2 text-indigo-400"></i>
+              <span>Kolkata, West Bengal </span>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-700 pt-3 md:pt-4">
+            <h4 class="font-semibold text-white mb-2 md:mb-3 text-sm md:text-base">Key Responsibilities:</h4>
+            <ul class="space-y-2 text-gray-300 text-sm md:text-base">
+              <li class="flex items-start">
+                <div class="bg-indigo-500/20 rounded-full p-1 mr-2 md:mr-3 mt-1">
+                  <i data-feather="check-circle" class="w-2 h-2 md:w-3 md:h-3 text-indigo-400"></i>
+                </div>
+                <span>Developed full-stack apps with <span class="text-indigo-400">React.js, Node.js,
+                    MongoDB</span></span>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-indigo-500/20 rounded-full p-1 mr-2 md:mr-3 mt-1">
+                  <i data-feather="check-circle" class="w-2 h-2 md:w-3 md:h-3 text-indigo-400"></i>
+                </div>
+                <span>Built <span class="text-purple-400">RESTful APIs</span> with authentication</span>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-indigo-500/20 rounded-full p-1 mr-2 md:mr-3 mt-1">
+                  <i data-feather="check-circle" class="w-2 h-2 md:w-3 md:h-3 text-indigo-400"></i>
+                </div>
+                <span>Agile team collaboration using <span class="text-purple-400">Jira</span></span>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-indigo-500/20 rounded-full p-1 mr-2 md:mr-3 mt-1">
+                  <i data-feather="check-circle" class="w-2 h-2 md:w-3 md:h-3 text-indigo-400"></i>
+                </div>
+                <span>Improved performance by <span class="text-indigo-400">25%</span></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-700">
+            <h4 class="font-semibold text-white mb-2 text-sm md:text-base">Tech Stack:</h4>
+            <div class="flex flex-wrap gap-1 md:gap-2">
+              <span
+                class="bg-gray-700/80 px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm flex items-center">
+                <i class="devicon-react-original colored mr-1"></i>React
+              </span>
+              <span
+                class="bg-gray-700/80 px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm flex items-center">
+                <i class="devicon-nodejs-plain colored mr-1"></i>Node.js
+              </span>
+              <span
+                class="bg-gray-700/80 px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm flex items-center">
+                <i class="devicon-mongodb-plain colored mr-1"></i>MongoDB
+              </span>
+              <span
+                class="bg-gray-700/80 px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm flex items-center">
+                <i class="devicon-git-plain colored mr-1"></i>Git
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto  rounded-lg shadow-2xl">
+    <div class="text-center mb-16">
+      <h2 class=" font-extrabold  tracking-tight relative inline-block text-3xl md:text-4xl  text-gradient mb-3">
+        Technical Skills
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">A comprehensive look at my
+        professional stack and tools.</p>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+      <div
+        class="skill-card group bg-gray-800/70 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-teal-500/50 relative overflow-hidden">
+
+        <div
+          class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-teal-500/80">
+        </div>
+
+        <div
+          class="w-20 h-20 mx-auto mb-4 bg-gray-800/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+          <i class="devicon-react-original colored text-4xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Frontend</h3>
+
+        <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
+          <span class="skill-tag">
+            <i class="devicon-html5-plain colored"></i> HTML
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-css3-plain colored"></i> CSS
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-javascript-plain colored"></i> JS
+          </span>
+          <span class="skill-tag text-teal-300 font-medium">
+            <i class="devicon-react-original colored"></i> React
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-tailwindcss-original colored"></i> Tailwind
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-indigo-500/50 relative overflow-hidden">
+        <div
+          class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-indigo-500/80">
+        </div>
+
+        <div
+          class="w-20 h-20 mx-auto mb-4 bg-indigo-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+          <i class="devicon-nodejs-plain colored text-4xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Backend</h3>
+
+        <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
+          <span class="skill-tag text-indigo-300 font-medium">
+            <i class="devicon-nodejs-plain colored"></i> Node.js
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-express-original text-gray-300"></i> Express
+          </span>
+          <span class="skill-tag">
+            🔗 REST APIs
+          </span>
+          <span class="skill-tag">
+            🔑 JWT
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-green-500/50 relative overflow-hidden">
+        <div
+          class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-green-500/80">
+        </div>
+
+        <div
+          class="w-20 h-20 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+          <i class="devicon-mongodb-plain colored text-4xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Databases</h3>
+
+        <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
+          <span class="skill-tag text-green-300 font-medium">
+            <i class="devicon-mongodb-plain colored"></i> MongoDB
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-mysql-plain colored"></i> MySQL
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-firebase-plain colored"></i> Firebase
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-red-500/50 relative overflow-hidden">
+        <div
+          class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-red-500/80">
+        </div>
+
+        <div
+          class="w-20 h-20 mx-auto mb-4 bg-red-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+          <i class="devicon-git-plain colored text-4xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">DevOps & Tools</h3>
+
+        <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
+          <span class="skill-tag">
+            <i class="devicon-jira-plain colored"></i> Jira
+          </span>
+          <span class="skill-tag text-red-300 font-medium">
+            <i class="devicon-git-plain colored"></i> Git
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-github-original colored"></i> GitHub
+          </span>
+          <span class="skill-tag">
+            <i class="devicon-docker-plain colored"></i> Docker
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="skill-card group bg-gray-800/70 rounded-2xl p-6 text-center shadow-lg transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-gray-700/80 border border-transparent hover:border-pink-500/50 relative overflow-hidden">
+        <div
+          class="absolute inset-0 border-2 border-transparent rounded-2xl transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:border-pink-500/80">
+        </div>
+
+        <div
+          class="w-20 h-20 mx-auto mb-4 bg-pink-500/10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+          <i class="devicon-figma-plain colored text-4xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-white">Design & UX</h3>
+
+        <div class="sub-skills flex flex-wrap justify-center gap-2 text-gray-300 text-sm">
+          <span class="skill-tag text-pink-300 font-medium">
+            <i class="devicon-figma-plain colored"></i> Figma
+          </span>
+          <span class="skill-tag">
+            🎨 Adobe XD
+          </span>
+          <span class="skill-tag">
+            ✨ UI/UX Principles
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Education Section -->
+  <section id="education"
+    class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto  rounded-xl "
+    data-aos="fade-right">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gradient mb-3">Education</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+        A strong foundation in academics combined with hands-on projects has shaped my technical and problem-solving
+        skills.
+      </p>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Graduation -->
+      <div class="bg-gray-800/70 backdrop-blur-sm rounded-xl p-6 text-center card-hover">
+        <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/Meghnad_Saha_Institute_of_Technology_Logo.svg.png" alt="MSIT Logo"
+            class="w-14 h-14 object-contain " loading="lazy">
+
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Graduation</h3>
+        <p class="text-gray-300 font-medium">B.Tech in CSE</p>
+        <p class="text-gray-400">Meghnad Saha Institute of Technology (MAKAUT University)</p>
+        <p class="text-gray-400 mt-2">2021 – 2025</p>
+        <p class="text-gray-400">CGPA: <span class="text-primary-500 font-semibold">8.45</span></p>
+      </div>
+
+      <!-- Higher Secondary -->
+      <div class="bg-gray-800/70 backdrop-blur-sm rounded-xl p-6 text-center card-hover">
+        <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+          <img src="https://kumarashutoshmain.org/wp-content/uploads/2024/01/589984.jpg" alt="Kumar Ashutosh Logo"
+            class="w-16 h-16 object-contain rounded-full ">
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Higher Secondary</h3>
+        <p class="text-gray-300 font-medium">Science Stream</p>
+        <p class="text-gray-400">Kumar Ashutosh Institution (main) Boys' (WBCHSE Board)</p>
+        <p class="text-gray-400 mt-2">Completed: 2021</p>
+        <p class="text-gray-400">Percentage: <span class="text-primary-500 font-semibold">84</span></p>
+      </div>
+
+      <!-- Secondary -->
+      <div class="bg-gray-800/70 backdrop-blur-sm rounded-xl p-6 text-center card-hover">
+        <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+          <img
+            src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-1/397421560_808095537784159_8080291684722642459_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=f907e8&_nc_ohc=Q9t4qGroFWUQ7kNvwFMObvj&_nc_oc=AdnhXfqond60ULlHHMEOK_vTKWfSRoy_b5w16xy_PulliItEItOtyuzFjBAmi8wnVJ0&_nc_zt=24&_nc_ht=scontent.fccu3-1.fna&_nc_gid=R3Uza07JqTux7gHshr91lw&oh=00_AfdYf5Joeo2efqKpeI-SITz8f3YpXDm6UJ0iA8UwN-2YDg&oe=68E92F97"
+            alt="TSCCS" class="w-16 h-16 object-contain rounded-full ">
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Secondary</h3>
+        <p class="text-gray-300 font-medium">General Curriculum</p>
+        <p class="text-gray-400">The Scottish Church Collegiate School (WBBSE Board)</p>
+        <p class="text-gray-400 mt-2">Completed: 2019</p>
+        <p class="text-gray-400">Percentage: <span class="text-primary-500 font-semibold">87.42</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project Section -->
+
+  <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto rounded-xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gradient mb-3" data-aos="zoom-in">
+        Featured Projects
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-3"></div>
+      <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        A curated showcase of my most impactful and technically challenging creations — where innovation meets
+        execution.
+      </p>
+    </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project 1: Innomart -->
+      <div class="bg-gray-800/50 rounded-xl overflow-hidden card-hover backdrop-blur-sm">
+        <div class="h-48 bg-white relative">
+          <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/innomart.png" alt="Innomart"
+            class="w-full h-full object-contain">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Web App</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Innomart</h3>
+          <p class="text-gray-400 mb-4">
+            Full-featured e-commerce platform with user management, cart, orders,
+            payment integration, and real-time chat & notifications.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-react-original colored text-base"></i> React
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-nodejs-plain colored text-base"></i> Node.js
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-mongodb-plain colored text-base"></i> MongoDB
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-socketio-original text-gray-300 text-base"></i> Socket.IO
+            </span>
+          </div>
+          <a href="#" class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+            View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: Notes App -->
+      <div class="rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
+        <div class="swiper h-48 relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide bg-white">
+              <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-3.png"
+                class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 1">
+            </div>
+            <div class="swiper-slide bg-white">
+              <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-1.png"
+                class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 2">
+            </div>
+            <div class="swiper-slide bg-[#9DC0FA]">
+              <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/notes-app-2.png"
+                class="w-full h-full object-contain rounded-t-xl" alt="Notes App Screenshot 3">
+            </div>
+          </div>
+          <div class="swiper-pagination absolute bottom-2 left-0 w-full text-center"></div>
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Notes App</h3>
+          <p class="text-gray-400 mb-4">
+            A full-stack notes management app with
+            <span class="text-primary-400 font-medium">add, edit, delete</span>,
+            plus <span class="text-primary-400 font-medium">server-side pagination</span>
+            and <span class="text-primary-400 font-medium">search with debouncing</span>
+            for smooth and scalable performance.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-react-original colored text-base"></i> React
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-nodejs-plain colored text-base"></i> Node.js
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-express-original text-gray-300 text-base"></i> Express.js
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-mongodb-plain colored text-base"></i> MongoDB
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-rest-plain text-gray-300 text-base"></i> REST API
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              🔎 Debounced Search
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              📄 Pagination
+            </span>
+          </div>
+
+          <a href="https://github.com/Suvajit2640/NotesApp" target="_blank"
+            class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+            View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: Memory Matching Game -->
+      <div class="rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
+        <div class="h-48 relative">
+          <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/memory-game.png"
+            alt="Memory Matching Game" class="w-full h-full object-cover">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Game</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Memory Matching Game</h3>
+          <p class="text-gray-400 mb-4">
+            A fun, interactive browser-based memory game built with JavaScript, HTML, and CSS.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-javascript-plain colored text-base"></i> JavaScript
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-html5-plain colored text-base"></i> HTML
+            </span>
+            <span class="flex items-center gap-1 text-xs bg-gray-700 px-2 py-1 rounded">
+              <i class="devicon-css3-plain colored text-base"></i> CSS
+            </span>
+          </div>
+          <a href="https://suvajit2640.github.io/Memory-Game/" target="_blank"
+            class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
+            View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="https://github.com/Suvajit2640" target="_blank"
+        class="inline-flex items-center border border-gray-700 hover:border-primary-500 text-gray-300 hover:text-primary-500 px-6 py-3 rounded-lg font-medium transition">
+        View All Projects
+      </a>
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gradient mb-3">Let's Build Something Great Together</h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">Ready to discuss your next MERN project or a full-time role?
+      </p>
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4"></div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        
-        <div class="bg-gray-800/70 rounded-xl p-8 shadow-2xl">
-            <h3 class="text-2xl font-bold mb-6 text-primary-400">My Digital Presence</h3>
-            
-            <div class="space-y-6 border-b border-gray-700 pb-6 mb-6">
-                
-                <div class="flex items-start transition duration-300 hover:scale-[1.02]">
-                    <i data-feather="mail" class="text-primary-500 mr-4 mt-1 w-6 h-6 flex-shrink-0"></i>
-                    <div>
-                        <h4 class="font-medium text-lg">Professional Email</h4>
-                        <a href="mailto:suvajit2003saha@gmail.com" class="text-gray-300 hover:text-white transition">suvajit2003saha@gmail.com</a>
-                    </div>
-                </div>
-                
-                <div class="flex items-start transition duration-300 hover:scale-[1.02]">
-                    <i data-feather="phone" class="text-primary-500 mr-4 mt-1 w-6 h-6 flex-shrink-0"></i>
-                    <div>
-                        <h4 class="font-medium text-lg">Contact Number</h4>
-                        <a href="tel:+918777761060" class="text-gray-300 hover:text-white transition">+91 8777761060</a>
-                    </div>
-                </div>
-                
-                <div class="flex items-start transition duration-300 hover:scale-[1.02]">
-                    <i data-feather="map-pin" class="text-primary-500 mr-4 mt-1 w-6 h-6 flex-shrink-0"></i>
-                    <div>
-                        <h4 class="font-medium text-lg">Current Location</h4>
-                        <p class="text-gray-300">Kolkata, West Bengal, India</p>
-                    </div>
-                </div>
-            </div>
-            
+
+      <div class="bg-gray-800/70 rounded-xl p-8 shadow-2xl">
+        <h3 class="text-2xl font-bold mb-6 text-primary-400">My Digital Presence</h3>
+
+        <div class="space-y-6 border-b border-gray-700 pb-6 mb-6">
+
+          <div class="flex items-start transition duration-300 hover:scale-[1.02]">
+            <i data-feather="mail" class="text-primary-500 mr-4 mt-1 w-6 h-6 flex-shrink-0"></i>
             <div>
-                <h4 class="font-bold text-xl mb-4 text-gray-200">Connect with me (Developer & Professional)</h4>
-                <div class="flex space-x-4">
-                    
-                    <a href="https://github.com/Suvajit2640" target="_blank" title="GitHub Profile"
-                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-900 transition transform hover:scale-110">
-                        <i data-feather="github" class="text-gray-300 w-6 h-6"></i>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/suvajit-saha/" target="_blank" title="LinkedIn Profile"
-                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-[#0A66C2] transition transform hover:scale-110">
-                        <i data-feather="linkedin" class="text-gray-300 w-6 h-6"></i>
-                    </a>
-                    
-                    <a href="https://www.geeksforgeeks.org/user/suvajit2640saha/" target="_blank" title="GeeksforGeeks DSA Profile"
-                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition transform hover:scale-110">
-                        <i data-feather="code" class="text-gray-300 w-6 h-6"></i>
-                    </a>
-                    
-                </div>
+              <h4 class="font-medium text-lg">Professional Email</h4>
+              <a href="mailto:suvajit2003saha@gmail.com"
+                class="text-gray-300 hover:text-white transition">suvajit2003saha@gmail.com</a>
             </div>
-        </div>
+          </div>
 
-        <div class="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm relative border border-gray-700">
-            <h3 class="text-2xl font-bold mb-6 text-secondary-400">Initiate a Conversation</h3>
-            <form id="contactForm" class="space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium mb-1 text-gray-300">Your Name (Required)</label>
-                    <input type="text" id="name" name="name" required
-                        class="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium mb-1 text-gray-300">Your Professional Email (Required)</label>
-                    <input type="email" id="email" name="email" required
-                        class="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-medium mb-1 text-gray-300">Your Message or Opportunity Details</label>
-                    <textarea id="message" name="message" rows="4" required
-                        class="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-6 py-3 rounded-lg font-bold text-lg transition duration-300 ease-in-out transform hover:scale-[1.01] shadow-xl">
-                    <i data-feather="send" class="w-5 h-5 mr-2 inline-block"></i>
-                    Send Professional Inquiry
-                </button>
-            </form>
-
-            <div id="toast"
-                class="fixed bottom-6 right-6 px-6 py-4 rounded-lg shadow-lg text-white font-medium transition-all opacity-0 pointer-events-none">
+          <div class="flex items-start transition duration-300 hover:scale-[1.02]">
+            <i data-feather="phone" class="text-primary-500 mr-4 mt-1 w-6 h-6 flex-shrink-0"></i>
+            <div>
+              <h4 class="font-medium text-lg">Contact Number</h4>
+              <a href="tel:+918777761060" class="text-gray-300 hover:text-white transition">+91 8777761060</a>
             </div>
+          </div>
+
+          <div class="flex items-start transition duration-300 hover:scale-[1.02]">
+            <i data-feather="map-pin" class="text-primary-500 mr-4 mt-1 w-6 h-6 flex-shrink-0"></i>
+            <div>
+              <h4 class="font-medium text-lg">Current Location</h4>
+              <p class="text-gray-300">Kolkata, West Bengal, India</p>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
 
-    <!-- Footer -->
-<!-- Footer -->
-<footer class="bg-gray-900/80 border-t border-gray-800 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-        
-        <p class="text-gray-400 text-sm md:text-base">
-            © 2025 <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 font-semibold">Suvajit Saha</span>. All rights reserved.
-        </p>
-      
-        <div class="flex space-x-4">
-            <a href="https://github.com/Suvajit2640" target="_blank" 
-               class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition transform hover:scale-110">
-                <i data-feather="github" class="text-gray-300 w-5 h-5"></i>
+        <div>
+          <h4 class="font-bold text-xl mb-4 text-gray-200">Connect with me (Developer & Professional)</h4>
+          <div class="flex space-x-4">
+
+            <a href="https://github.com/Suvajit2640" target="_blank" title="GitHub Profile"
+              class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-900 transition transform hover:scale-110">
+              <i data-feather="github" class="text-gray-300 w-6 h-6"></i>
             </a>
-            <a href="https://www.linkedin.com/in/suvajit-saha/" target="_blank" 
-               class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition transform hover:scale-110">
-                <i data-feather="linkedin" class="text-gray-300 w-5 h-5"></i>
+
+            <a href="https://www.linkedin.com/in/suvajit-saha/" target="_blank" title="LinkedIn Profile"
+              class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-[#0A66C2] transition transform hover:scale-110">
+              <i data-feather="linkedin" class="text-gray-300 w-6 h-6"></i>
             </a>
-            <a href="https://www.geeksforgeeks.org/user/suvajit2640saha/" target="_blank" 
-               class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition transform hover:scale-110">
-                <i data-feather="code" class="text-gray-300 w-5 h-5"></i>
+
+            <a href="https://www.geeksforgeeks.org/user/suvajit2640saha/" target="_blank"
+              title="GeeksforGeeks DSA Profile"
+              class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition transform hover:scale-110">
+              <i data-feather="code" class="text-gray-300 w-6 h-6"></i>
             </a>
+
+          </div>
         </div>
+      </div>
+
+      <div class="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm relative border border-gray-700">
+        <h3 class="text-2xl font-bold mb-6 text-secondary-400">Initiate a Conversation</h3>
+        <form id="contactForm" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1 text-gray-300">Your Name (Required)</label>
+            <input type="text" id="name" name="name" required
+              class="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1 text-gray-300">Your Professional Email
+              (Required)</label>
+            <input type="email" id="email" name="email" required
+              class="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-1 text-gray-300">Your Message or Opportunity
+              Details</label>
+            <textarea id="message" name="message" rows="4" required
+              class="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-6 py-3 rounded-lg font-bold text-lg transition duration-300 ease-in-out transform hover:scale-[1.01] shadow-xl">
+            <i data-feather="send" class="w-5 h-5 mr-2 inline-block"></i>
+            Send Professional Inquiry
+          </button>
+        </form>
+
+        <div id="toast"
+          class="fixed bottom-6 right-6 px-6 py-4 rounded-lg shadow-lg text-white font-medium transition-all opacity-0 pointer-events-none">
+        </div>
+      </div>
     </div>
-</footer>
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
+  </section>
 
-        // Navbar toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+  <!-- Footer -->
+  <footer class="bg-gray-900/80 border-t border-gray-800 py-8">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
 
-        // Feather icons
-        feather.replace();
+      <p class="text-gray-400 text-sm md:text-base">
+        © 2025 <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 font-semibold">Suvajit
+          Saha</span>. All rights reserved.
+      </p>
 
-        // Vanta background
-        VANTA.GLOBE({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.0,
-            scaleMobile: 1.0,
-            color: 0x6366f1,
-            backgroundColor: 0x111827
-        });
-
-        // Swiper slider for projects
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            autoplay: { delay: 3000 }
-        });
-    </script>
+      <div class="flex space-x-4">
+        <a href="https://github.com/Suvajit2640" target="_blank"
+          class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition transform hover:scale-110">
+          <i data-feather="github" class="text-gray-300 w-5 h-5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/suvajit-saha/" target="_blank"
+          class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition transform hover:scale-110">
+          <i data-feather="linkedin" class="text-gray-300 w-5 h-5"></i>
+        </a>
+        <a href="https://www.geeksforgeeks.org/user/suvajit2640saha/" target="_blank"
+          class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition transform hover:scale-110">
+          <i data-feather="code" class="text-gray-300 w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -26,15 +26,20 @@ html {
 .card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
 }
+
 .skill-tag {
   /* Common styling for the small skill items */
   display: flex;
   align-items: center;
-  gap: 0.25rem; /* gap-1 */
+  gap: 0.25rem;
+  /* gap-1 */
   padding: 0.3rem 0.6rem;
-  border-radius: 9999px; /* full rounded */
-  background-color: rgba(30, 41, 59, 0.7); /* slate-800/70 */
+  border-radius: 9999px;
+  /* full rounded */
+  background-color: rgba(30, 41, 59, 0.7);
+  /* slate-800/70 */
   backdrop-filter: blur(5px);
   font-weight: 500;
   white-space: nowrap;
@@ -42,7 +47,73 @@ html {
 }
 
 .skill-tag:hover {
-  background-color: rgba(55, 65, 81, 0.9); /* gray-700/90 */
+  background-color: rgba(55, 65, 81, 0.9);
+  /* gray-700/90 */
   transform: translateY(-1px);
   cursor: pointer;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.experience-dot {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+  transition: all 0.3s ease;
+}
+.experience-card:hover .experience-dot {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.3);
+}
+@media (min-width: 768px) {
+  .experience-card {
+    width: 70%;
+    @media (min-width:1280px)
+    {
+width: 46% !important;
+    }
+  }
+  .experience-card:nth-child(odd) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .experience-card:nth-child(even) {
+    margin-left: 400px;
+    margin-right: 0;
+    @media(min-width: 768px)
+    {
+      margin-left: 150px;
+    }
+    @media(min-width:1280px)
+    {
+      margin-left: 400px;
+    }
+  }
+  .experience-card:nth-child(odd)::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(31, 41, 55, 0.7);
+  }
+  .experience-card:nth-child(even)::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(31, 41, 55, 0.7);
+  }
+}
+html {
+  scroll-behavior: smooth;
 }

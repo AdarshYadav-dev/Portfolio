@@ -506,9 +506,7 @@
 
 
   <!-- Education Section -->
-  <section id="education"
-    class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto  rounded-xl "
-    data-aos="fade-right">
+  <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto  rounded-xl " data-aos="fade-right">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-extrabold text-gradient mb-3">Education</h2>
       <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -610,9 +608,19 @@
               <i class="devicon-socketio-original text-gray-300 text-base"></i> Socket.IO
             </span>
           </div>
-          <a href="#" class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
-            View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-          </a>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <!-- Project Code Button -->
+            <a href="https://github.com/Suvajit2640/NotesApp" target="_blank"
+              class="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-primary-500 text-gray-200 hover:text-white rounded-lg font-medium transition-all">
+              <i class="devicon-github-original text-lg"></i> View Code
+            </a>
+
+            <!-- Live Demo Button -->
+            <a href="https://suvajit2640.github.io/NotesApp/" target="_blank"
+              class="flex items-center gap-2 px-4 py-2 border border-gray-700 hover:border-primary-500 text-gray-200 hover:text-primary-500 rounded-lg font-medium transition-all">
+              <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+            </a>
+          </div>
         </div>
       </div>
 
@@ -637,13 +645,12 @@
         </div>
 
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Notes App</h3>
+          <h3 class="text-xl font-semibold mb-2">Note Worthy</h3>
           <p class="text-gray-400 mb-4">
-            A full-stack notes management app with
-            <span class="text-primary-400 font-medium">add, edit, delete</span>,
-            plus <span class="text-primary-400 font-medium">server-side pagination</span>
-            and <span class="text-primary-400 font-medium">search with debouncing</span>
-            for smooth and scalable performance.
+            A full-stack note management app featuring CRUD functionality. Engineered for scale with
+            <span class="text-primary-400 font-medium">server-side pagination</span> and
+            <span class="text-primary-400 font-medium">debounced search</span> to efficiently manage
+            <span class="text-primary-400 font-medium">over 10,000 notes</span> with a lag-free user experience.
           </p>
 
           <div class="flex flex-wrap gap-2 mb-4">
@@ -670,22 +677,39 @@
             </span>
           </div>
 
-          <a href="https://github.com/Suvajit2640/NotesApp" target="_blank"
-            class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
-            View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-          </a>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <!-- Project Code Button -->
+            <a href="https://github.com/Suvajit2640/NotesApp" target="_blank"
+              class="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-primary-500 text-gray-200 hover:text-white rounded-lg font-medium transition-all">
+              <i class="devicon-github-original text-lg"></i> View Code
+            </a>
+
+            <!-- Live Demo Button -->
+            <a href="https://suvajit2640.github.io/NotesApp/" target="_blank"
+              class="flex items-center gap-2 px-4 py-2 border border-gray-700 hover:border-primary-500 text-gray-200 hover:text-primary-500 rounded-lg font-medium transition-all">
+              <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+            </a>
+          </div>
+
         </div>
       </div>
 
       <!-- Project 3: Memory Matching Game -->
       <div class="rounded-xl overflow-hidden card-hover backdrop-blur-sm bg-gray-800/50">
-        <div class="h-48 relative">
-          <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/memory-game.png"
-            alt="Memory Matching Game" class="w-full h-full object-cover">
-          <div class="absolute top-4 right-4">
-            <span class="bg-gray-900/80 text-xs px-3 py-1 rounded-full">Game</span>
+        <div class="swiper h-48 relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide bg-[#9A58F5]">
+              <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/memory-match1.png"
+                class="w-full h-full object-contain rounded-t-xl" alt="Memory Game Screenshot 1">
+            </div>
+            <div class="swiper-slide bg-[#9A58F5]">
+              <img src="https://raw.githubusercontent.com/Suvajit2640/portfolio-assets/main/memory%20match-2.png"
+                class="w-full h-full object-contain rounded-t-xl" alt="Memory Game Screenshot 2">
+            </div>
           </div>
+          <div class="swiper-pagination absolute bottom-2 left-0 w-full text-center"></div>
         </div>
+
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">Memory Matching Game</h3>
           <p class="text-gray-400 mb-4">
@@ -702,10 +726,20 @@
               <i class="devicon-css3-plain colored text-base"></i> CSS
             </span>
           </div>
-          <a href="https://suvajit2640.github.io/Memory-Game/" target="_blank"
-            class="text-primary-500 hover:text-primary-400 text-sm font-medium flex items-center">
-            View Project <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-          </a>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <!-- Project Code Button -->
+            <a href="https://github.com/Suvajit2640/Memory-Game" target="_blank"
+              class="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-primary-500 text-gray-200 hover:text-white rounded-lg font-medium transition-all">
+              <i class="devicon-github-original text-lg"></i> View Code
+            </a>
+
+            <!-- Live Demo Button -->
+            <a href="https://memory-game-ruddy-six.vercel.app/" target="_blank"
+              class="flex items-center gap-2 px-4 py-2 border border-gray-700 hover:border-primary-500 text-gray-200 hover:text-primary-500 rounded-lg font-medium transition-all">
+              <i data-feather="play" class="w-4 h-4"></i> Play Game
+            </a>
+          </div>
+
         </div>
       </div>
 

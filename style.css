@@ -59,38 +59,44 @@ html {
   background-clip: text;
   color: transparent;
 }
+
 .experience-dot {
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
   transition: all 0.3s ease;
 }
+
 .experience-card:hover .experience-dot {
   transform: translateX(-50%) scale(1.1);
   box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.3);
 }
+
 @media (min-width: 768px) {
   .experience-card {
     width: 70%;
-    @media (min-width:1280px)
-    {
-width: 46% !important;
+
+    @media (min-width:1280px) {
+      width: 46% !important;
     }
   }
+
   .experience-card:nth-child(odd) {
     margin-right: auto;
     margin-left: 0;
   }
+
   .experience-card:nth-child(even) {
     margin-left: 400px;
     margin-right: 0;
-    @media(min-width: 768px)
-    {
+
+    @media(min-width: 768px) {
       margin-left: 150px;
     }
-    @media(min-width:1280px)
-    {
+
+    @media(min-width:1280px) {
       margin-left: 400px;
     }
   }
+
   .experience-card:nth-child(odd)::before {
     content: "";
     position: absolute;
@@ -102,6 +108,7 @@ width: 46% !important;
     border-bottom: 15px solid transparent;
     border-left: 15px solid rgba(31, 41, 55, 0.7);
   }
+
   .experience-card:nth-child(even)::before {
     content: "";
     position: absolute;

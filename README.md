@@ -70,12 +70,9 @@ with smooth animations and an elegant user interface.
 
 ---
 
+###  Setup Instructions
 
----
-
-##  Setup Instructions
-
-###  Clone the Repository
+##  Clone the Repository
 ```bash
 git clone https://github.com/yourusername/portfolio.git
 
@@ -92,6 +89,29 @@ npx live-server
 ```
 
 ---
+
+
+## JavaScript Functionality (script.js)
+- Contact Form
+- Sends messages using Formspree.io
+
+## Shows success/error pop-ups using Toastify.js
+- Mobile Menu
+
+## Toggle navigation bar on smaller screens.
+- Swiper Slider
+
+## Automatically slides project cards or testimonials.
+- Vanta Globe
+
+## Interactive animated background (3D globe).
+- Scroll Animations
+
+## Smooth section transitions using AOS.js
+- Active Navbar
+- Highlights the current section while scrolling.
+
+  ---
 
 ## CDN Dependencies
 Include these in your <head> or before </body> in index.html:

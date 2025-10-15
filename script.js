@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (err) {
         Toastify({
-          text: "Network error. Please try again. ❌",
+          text: "Network error. Please try again !!",
           duration: 4000,
           gravity: "top",
           position: "center",

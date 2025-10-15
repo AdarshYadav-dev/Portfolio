@@ -96,11 +96,11 @@ npx live-server
 ## CDN Dependencies
 Include these in your <head> or before </body> in index.html:
 
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js"></script>
+- <script src="https://unpkg.com/feather-icons"></script>
+- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+- <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js"></script>
 
 
 
